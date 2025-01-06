@@ -60,6 +60,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedMovie = movies[indexPath.row]
+        let detailsVC = DetailsViewController(movie: selectedMovie)
+        navigationController?.pushViewController(detailsVC, animated: true)
     }
 }
 
